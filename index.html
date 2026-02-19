@@ -18,36 +18,35 @@
     />
     <link rel="stylesheet" href="css/all.min.css">
    </head>
- <header aria-label="Header">
-    <nav ria-label="navigation"
-    >
+ <header>
+    <nav>
         <div class="nav-center">
                 <!-- navigation header -->
               <div class="nav-header">
 <!--                 <img src="Assets/logo/red-bg.bmp" alt="logo" class="logo">
  -->               <a href="index.html" class="h1-a">
-  <h1>MGL  Tech Hub
+  <h1>MARVEEYLABS
   </h1>
  </a>
                 <button class="nav-toggle" aria-label="button" title="button"><i class="fas fa-bars"></i>
                 </button>
               </div>
-              <!-- links -->
+              <!-- nav links -->
                <ul class="links">
                 <li>
-                    <a href="index.html">home</a>
+                    <a href="/">home</a>
                 </li>
                 <li>
-                    <a href="about.html">about</a>
+                    <a href="/pages/about.html">about</a>
                 </li>
                 <li>
-                    <a href="services.html">services</a>
+                    <a href="/pages/services.html">services</a>
                 </li>
                 <li>
-                    <a href="courses.html">courses</a>
+                    <a href="/pages/courses.html">courses</a>
                 </li>
                 <li>
-                    <a href="contact.html">contacts</a>
+                    <a href="/pages/contact.html">contacts</a>
                 </li>
                </ul>
                <!-- Social media links -->
@@ -84,16 +83,69 @@
  <!-- Main section -->
    <main class="main">
     
-    <section class="hero">
+    <section class="hero" id="homeHero">
        <div class="container">
-        <h2>Empowering Digital Skills & Services</h2>
-        <p>Training, printing, tech support & more - designed for students, kids & small businesses.</p>
-        <a href="contact.html" class="btn">Get started</a>
+        <h2>Helping Small Businesses and Individual Build Websites That Actually Work</h2>
+        <p>Stop struggling with websites that are slow, confusing, or just <q>pretty</q>.</p>
+        <p>I create functional easy to manage sites that grow with your goals, <br> whether you want to teach, sell, or streamline your business operations.</p>
+        <div class="btns">
+<a href="/pages/contact.html" class="btn">Get Your Websites or Consultation</a>
+<a href="/pages/contact.html" class="btn">Explore Services</a>
+        </div>
+        
        </div>
     </section>
+    <!-- problem section -->
+    <section  class="section-container">
+      <h2>Why Most Websites Fail</h2>
+      <article class="review">
+        <ul>
+          <li>
+            They look good but don’t convert or perform.
+          </li>
+          <li>DIY solutions take forever and frustrate you.</li>
+          <li>You’re not sure which service fits your goals.</li>
+        </ul>
+        <p>
+          With my help, your website is <b>fast</b>, <b>functional</b>, and <b>designed for results</b>. 
+        </p>
+        <p>
+          No wasted time. No tech headaches. Just a websites that work for you.
+        </p>
+        <a href="/pages/contact.html" class="btn">Let’s Solve Your Website Challenges</a>
+      </article>
+    </section>
+<!-- solution section -->
+    <section class="section-container">
+      <h2>How I Can Help You</h2>
+
+      <article class="review">
+        <div class="review">
+          <h3>Web Development</h3>
+          <p>Launch functional, performance focused websites.</p>
+        </div>
+        <div class="serviceCard">
+          <h3>Graphic Design</h3>
+          <p>Modern, clean designs that make an impact.p>
+        </div>
+        <div class="serviceCard">
+          <h3>Teaching Web & Computer Skills</h3>
+          <p>Practical skills you can use immediately.</p>
+        </div>
+        <div class="serviceCard">
+          <h3>Office Tech Support</h3>
+          <p>Solve everyday tech problems quickly and efficiently.</p>
+        </div>
+          <a href="/pages/services.html" class="secondaryBtn">See All Services</a>      
+      </article>
+       <!-- <div id="socialProof">
+        <p class="proof"><q>I never taught I could understand web basics until his teaching made it simple.</q> <small> &hyphen; Student</small></p>
+       </div> -->
+    </section>
+    <!-- reviews section -->
      <section id="Reviews" class="section-container">
       <div class="title">
-        <h2>Brand Reviews</h2>
+        <h2>Trusted by Students, Entrepreneurs, and Small Businesses</h2>
         <div class="underline"></div>
         <p>Check out what people are saying about our services</p>
       </div>
@@ -101,25 +153,73 @@
         <div id="img-container">
           <img src="images/marveey.jpg" id="person-img" alt="Service User" width="150px" height="150px">
         </div>
-        <h4 id="author">Olakunle Adeniyi</h4>
-        <p id="job">Civil Servant</p>
-        <p id="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente deleniti enim delectus tempore quis nisi! Architecto pariatur ad adipisci ratione, officiis molestiae a culpa consequatur voluptas rerum dignissimos incidunt aspernatur.
-        </p>
+        <h4 id="author">Tony Doe</h4>
+        <p id="job">One way Dispatch</p>
+        <p id="info">
+        <q>Marveey helped me launch my site in days, not months! super easy and effective.</q>
+      </p>
         <div class="button-container">
           <button class="prev-btn" aria-label="Previous button"><i class="fas fa-chevron-left"></i></button>
           <button class="next-btn" aria-label="Next button"><i class="fas fa-chevron-right"></i></button>
         </div>
       </article>
      </section>
+     <!-- FAQ section -->
+      <section class="section-container">
+        <h2>Questions You Might Have</h2>
+
+        <article class="review">
+          <div class="faqs">
+            <div class="faq-title">
+              <h3>Do I need previous experience?</h3>  
+              <div class="faq-btns">
+                <button type="button" title="open FAQ question">+</button>
+                <button type="button" title="close FAQ question">-</button>
+              </div>
+            </div>
+            <div class="faq-content">
+              <p>No. I will guide you step by step.</p>
+            </div>
+          </div>
+          <div class="faqs">
+            <div class="faq-title">
+              <h3>how long does a website take?</h3>  
+              <div class="faq-btns">
+                <button type="button" title="open FAQ question">+</button>
+                <button type="button" title="close FAQ question">-</button>
+              </div>
+            </div>
+            <div class="faq-content">
+              <p>it depends on scope. Most projects launch between 1-3 weeks.</p>
+            </div>
+          </div>
+          <div class="faqs">
+            <div class="faq-title">
+              <h3>can i manage it myself later?</h3>  
+              <div class="faq-btns">
+                <button type="button" title="open FAQ question">+</button>
+                <button type="button" title="close FAQ question">-</button>
+              </div>
+            </div>
+            <div class="faq-content">
+              <p>Yes. I provide training and support.</p>
+            </div>
+          </div>
+          <a href="/pages/contact.html" class="btn">Start your project today</a>
+        </article>
+      </section>
    </main>
    <!-- footer -->
+    <a href="#" class="topScrollBtn"> &UpArrow;</a>
    <footer> 
     <address>
     123, Macpherson Boulevard <br>
     Milky Way Galaxy, <br> 
     Earth.
     </address>
-    <p>Copyright &copy; 2025 | created with ❤️by  Marveey Goodlife </p>
+    <p>Copyright &copy; 2025 | created with ❤️by  
+      <a href="tel:+234903434343">Marveey Goodlife </a>
+    </p>
     </footer>
     <!-- Javascript -->
 <script src="script.js"></script>
