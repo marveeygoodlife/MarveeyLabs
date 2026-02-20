@@ -3,7 +3,7 @@
    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get in touch with MArveeyLabs for web development, grapgic design, tech training, or office tech support. Clear communication and fast responses.">
+    <meta name="description" content="Get in touch with MarveeyLabs for web development, graphic design, tech training, or office tech support. Clear communication and fast responses.">
     <meta name="Author" content="Marveey Goodlife">
     <title>Contact MarveeyLabs |Web Developer & Tech Support Services</title>
     <link rel="stylesheet" href="/style.css">
@@ -19,9 +19,8 @@
     />
     <link rel="stylesheet" href="css/all.min.css">
    </head>
- <header aria-label="Header">
-    <nav ria-label="navigation"
-    >
+ <header>
+    <nav>
         <div class="nav-center">
                 <!-- navigation header -->
               <div class="nav-header">
@@ -31,7 +30,7 @@
   >MARVEEYLABS
   </span>
  </a>
-                <button class="nav-toggle" aria-label="button" title="button"><i class="fas fa-bars"></i>
+                <button class="nav-toggle" aria-label="button" type="button"><i class="fas fa-bars"></i>
                 </button>
               </div>
               <!-- links -->
@@ -92,14 +91,14 @@
       <h2>you’ll get:</h2>
       <ul>
         <li> A clear response.</li>
-        <li> Honest guidiance.</li>
-        <li> No presure to commit.</li>
+        <li> Honest guidance.</li>
+        <li> No pressure to commit.</li>
       </ul>
     </div>
 </section>
 <section class="section-container">
     <h2>send me a message</h2>
-    <p>Use the form below to tell me what you need. I typically respond withing <time datetime="24"> 24 hours</time>.</p>
+    <p>Use the form below to tell me what you need. I typically respond within <time datetime="24"> 24 hours</time>.</p>
     <form action="" method="post" id="contactform">
         <label>
             Fullname:
@@ -111,6 +110,7 @@
             <input type="email" name="email" id="email" autocomplete="email" placeholder="example@email.com" data-error="emailError">
         </label>
         <div id="emailError" class="error"></div>
+        <label>Select service:
         <select name="serviceNeeded" id="service" title="Services-needed">
             <option disabled>Select</option>
             <option value="webDevelopment">Web development</option>
@@ -119,8 +119,9 @@
             <option value="design">Graphic Design</option>
             <option value="unCertain">Not  Sure</option>
         </select>
+        </label>
         <label for="message">Send Us a Message:
-        <textarea name="message" id="message" cols="30" rows="5" placeholder="message"></textarea>
+        <textarea name="message" id="message" cols="30" rows="5"></textarea>
         </label>
         <button type="submit" id="contactBtn">send message</button>
     </form>
@@ -131,6 +132,7 @@
         <li>I review your message carefully.</li>
         <li>I respond with clear next steps or questions.</li>
         <li>We discuss the best solution for your needs.</li>
+    </ul>
     </section>
     <section class="section-container">
         <h2>location & service area</h2>

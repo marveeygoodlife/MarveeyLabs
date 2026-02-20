@@ -1,192 +1,94 @@
  /* FORM STYLE */
-form#myform {
+form#contactform {
     border-radius: 5px;
-     max-width: 600px;
+    max-width: 600px;
     margin: 2rem auto;
     padding: 1.5rem;
     transition: box-shadow .3s ease;
+    border: 1px solid #ccc;
 }
-form#myform:hover {
+form#contactform:hover {
       box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1);
 }
 /* input style */
 input { 
     width: 100%;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 4px;
     box-sizing: border-box;
     height: 35px;
+    padding: 10px 12px;
  }
-#connect {
-    padding: .6em;
-}
+ 
 ::placeholder{
     color: var(--bg-color);
     font-family: inherit;
-    font-size: .99rem;
-font-weight: 500; 
-}
-input:focus, select:focus, button:focus {
-border: 2px solid #1E2A38;
-}
-input, select {
-    padding: .5rem;
+    font-size: .79rem;
+    font-weight: 300; 
  }
-input:hover, select:hover, button:focus {
-box-shadow: 0 0 2px 2px #d4af372c;
+input:focus, select:focus, button:focus, textarea:focus {
+    border: 1px solid hsl(209, 28%, 39%);
 }
-input[type="date"] {
-    margin-bottom: 1.1rem;
+ 
+input:hover, select:hover, button:hover, textarea:hover {
+    border: 1px solid #ccc;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
 }
+
+label  {
+    text-align: left;
+    margin: .85rem 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    display: block;
+ }
+ textarea {
+    display: block;
+    width: 100%;
+    border: none;
+ }
+ /* =====INPUT STYLE END===== */
+
+ /* error message */
 .error-message {
     color: #87CEEB;
     font-size: .60em;
     font-weight: bold;
     margin-top: 4px;
 }
-/* =====INPUT STYLE END===== */
-  
- /*======FIELDSET AND UL STYLE====== */
-fieldset {
-    margin: 0;
-    border:  none;
-}
-.fieldset1 {
-    margin-bottom: 1.2rem;
-}
-fieldset ul.form-grid {
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr) ;
-    grid-template-rows: auto;
-    width: fit-content;
-}
-ul li { 
-    display: flex;
-    flex-direction: column;
-    margin: .05em;
-    list-style-type: none;
+#error-message {
+    display: none;
  }
- ul.companyname {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 100%;
-    gap: .2rem;
- }
-ul.duration {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 1rem;
-    grid-template-rows: auto;
-    grid-template-columns: repeat(2, 1fr);
-}
- 
-label, legend {
-    text-align: left;
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
-    font-weight: 400;
-
- }
-.flexlabel input {
-    display: flex;
-    flex-direction: row;
-}/*======FIELDSET STYLE END=====*/
-ul.terms   {
-    display: inline-block;
-    flex-direction: column;
-}
-
-.owner {
-    width: 100%;
-}
 /* =====SELECT STYLE========= */
 select {
     border-radius: .4rem;
-    margin-bottom: 1.1rem;
+    margin-bottom: 1rem;
     box-sizing: border-box;
     background-color: #fff;
-    border: 1px solid #ccc;
+    border: none;
     color: #333;
+    width: 100%;
     height: 35px;
  }
  select option {
     background-color: #333;
     color: #fff;
 }
- select.studentoption, select#regprogram, select#country, select#duration  {
-    width: 100%;
-}
-.checkbox {
-    width: unset;
-    margin-right: .4rem;
-}
 /* ===SELECT STYLE END=======*/
-span {
-    color: red;
-}
-.mtop {
-    margin-top: 0.9em;
-}
-/*  */
- #flexlabel {
-    font-size: .65em;
-    margin-top: 1rem;
- }
-/*=====FORM STYLE END===== */
- 
- 
-.flexa {
-    margin: auto .4em;
-}
-label#flexlabel, .flexa  { 
-    display: inline-flex;
-    align-items: center;
- }
-@media screen and (max-width: 350px) {
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-}
- #error-message {
-    display: none;
- }
-@media screen and (min-width:600px) {
-    fieldset ul.form-grid {
-        width: 100%;
-    }   
-   /*  input, select {
-        padding: .7rem;
-     } */
-    label, legend {
-         font-size: 1.1em;
-     }
-    #flexlabel {
-        font-size: 1rem;
-      }
-    
-    .error-message {
-      
-        font-size: 1em;
-         
-    }
-    ::placeholder {
-        font-size: 1.1em;
-    }
-    
-    .formp {
-        font-size: 1.2em;
-    }
-  /*   input, select, button {
-     } */
-    
-    #flexlabel {
 
-        font-size: unset;
-     }
-}
+ 
+ /* form button */
+ #contactBtn {
+    padding: 12px 15px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    border: none;
+    background-color: var(--clr-grey-2);
+    color: #ffffff;
+    border-radius: 8px;
+ }
+ #contactBtn:hover {
+background-color: var(--clr-grey-1);
+ }
