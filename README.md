@@ -14,31 +14,31 @@ and also empower them with technical skills.
 - Attraction & Conversion of visitors using CTA's (e.g Register Now)
 _ Build Trust by showcasing testimonials, images & / videos.
 
-### PHASE ONE
+## PHASE ONE
 
-## PAGE STRUCTURE OUTLINE
+### PAGE STRUCTURE OUTLINE
 
-Homepage - Overview of all services, Intro banner & CTA buttons, brand review (for teust building) and FAQs.
-About Page- Who I am, my mission, vision and how I work.
-Services Page - Detailed breakdown of what MarveeyLabs offers.
-Contact Page - Form + whatsapp button, & map.
-Testimonials/Gallery for social proof
+- Homepage - Overview of all services, Intro banner & CTA buttons, brand review (for teust building) and FAQs.
+- About Page- Who I am, my mission, vision and how I work.
+- Services Page - Detailed breakdown of what MarveeyLabs offers.
+- Contact Page - Form + whatsapp button, & map.
+- Testimonials/Gallery for social proof
 
-## PLANNING CONTENT
+### PLANNING CONTENT
 
 - I will start by writing contents for all pages such as paragraphs, headlines, heading, and bullet points
 - Preparation of service icons,social
 icons,  photos, and testimonials
 - decide on page consistent color, logo and font style which represent my brand.
 
-### PHASE TWO: DEVELOPMENT PROCESS
+## PHASE TWO: DEVELOPMENT PROCESS
 
 - I will write my code from scratch and try to integrate it with modern standard while i'm making future upgrades.
 - HTML - For the structure
 - CSS -  for styling(i'll utilize flexbox and grid for layout)
 -Javascript - for interactivity;  I will add a toggle menu for navigation, scroll to top button, form validation & testimonials that scrolls repeatedly etc.
 
-### PHASE 3: FRONT-END DEVELOPMENT
+## PHASE 3: FRONT-END DEVELOPMENT
 
 Build Structure (HTML)
 
@@ -68,13 +68,13 @@ Javascript Interactivity
 - Scroll to top btn
 - dynamic nav toggle
 
-### PHASE FOUR: DOMAIN & HOSTING
+## PHASE FOUR: DOMAIN & HOSTING
 
 - Buy a domain
 - Get hosting
 - connect domain
 
-### PHASE FIVE: SEO & ANALYTICS
+## PHASE FIVE: SEO & ANALYTICS
 
 ####  use rich  SEO on every page
 
@@ -88,7 +88,7 @@ Javascript Interactivity
 
 - Add google Analytics tracking code
 
-### PHASE SIX: FREQUENT MAINTENANCE
+## PHASE SIX: FREQUENT MAINTENANCE
 
 - Check the forms monthly
 - Frequent backup  & use of version control to save my files
