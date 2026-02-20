@@ -1,5 +1,4 @@
-
-/* FORM STYLE */
+ /* FORM STYLE */
 form#myform {
     border-radius: 5px;
      max-width: 600px;
@@ -16,6 +15,7 @@ input {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    height: 35px;
  }
 #connect {
     padding: .6em;
@@ -101,18 +101,7 @@ ul.terms   {
     display: inline-block;
     flex-direction: column;
 }
-/*======A STYLE=====*/
-/* a:link {
-    color: var(--links);
-    text-decoration: none;
-}
-a:visited {
-    color: var(--links);
-}
-a:hover {
-    color: var(--Icons);
-    text-decoration: underline   ;
-} *//* =====A STYLE END========== */
+
 .owner {
     width: 100%;
 }
@@ -124,6 +113,7 @@ select {
     background-color: #fff;
     border: 1px solid #ccc;
     color: #333;
+    height: 35px;
  }
  select option {
     background-color: #333;
@@ -143,22 +133,7 @@ span {
 .mtop {
     margin-top: 0.9em;
 }
- button.formbtn {
-    margin:1rem  auto;
-    display: block;
-    width: 50%;
-    padding: .4em;
-    border-radius: 4px;
-    outline: none;
-    font-size: 1.1rem;
-    transition: border-color .3s ease, transform .3s ease-in-out;
- }
- button.formbtn:hover {
-    border-color: #1E2A38;
-    background-color: #87CEEB;
-    color: #1E2A38;
-    transform: scaleX(1.20);
- }
+/*  */
  #flexlabel {
     font-size: .65em;
     margin-top: 1rem;
@@ -209,10 +184,7 @@ label#flexlabel, .flexa  {
     }
   /*   input, select, button {
      } */
-    button {
-        margin:2rem  auto;
-        width: 50%;
-    }
+    
     #flexlabel {
 
         font-size: unset;
