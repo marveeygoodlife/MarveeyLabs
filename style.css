@@ -90,7 +90,6 @@ body {
 }
 h1, h2, h3 {
     letter-spacing: var(--spacing);
-    text-transform: capitalize;
     line-height: 1.25;
     font-family: 'Montserrat';
     font-weight: 800;
@@ -336,6 +335,9 @@ footer {
 .footer-social-icons {
     font-size: 1.5rem;
     display: flex;
+}
+.footer-social-icons li {
+    list-style-type: none;
 }
 .footer-social-icons a {
     margin: 0 0.5rem;
