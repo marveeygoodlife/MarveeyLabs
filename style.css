@@ -86,7 +86,7 @@ html {
 body {
     color: var(--clr-grey-1);
     background-color: var(--clr-grey-10);
-    font: normal 300 .875rem / 1.5 'Lato', sans-serif;
+    font: normal 300 .975rem / 1.5 'Lato', sans-serif;
 }
 h1, h2, h3 {
     letter-spacing: var(--spacing);
@@ -95,6 +95,7 @@ h1, h2, h3 {
     font-family: 'Montserrat';
     font-weight: 800;
     text-transform: capitalize;
+    margin: 1.25rem 0;
 }
 h1 {font-size: 1.5rem;}
  
@@ -199,10 +200,10 @@ text-decoration: underline;
    background-color: rgb(40, 60, 80);
     color: var(--clr-white);
     font-size: 1rem;
-    padding: 0.75rem 1.5rem;
+    padding: 0.5rem 1.5rem;
     margin-top: 1rem;
-    width: 50%;
-    font-weight: 600;
+    width: fit-content;
+    font-weight: 500;
     border-radius: 5px;
     text-decoration: none;
     outline: none;
@@ -237,12 +238,13 @@ img#aboutImg {
      border-radius: var(--radius);
      box-shadow: var(--light-shadow);
      transition: var(--transition);
-     text-align: center;
- } 
+  } 
  article.review:hover {
      box-shadow: var(--dark-shadow); 
  } 
-
+#Reviews > article.review {
+    text-align: center;
+}
   section.section-container {
     display: grid;
     place-items: center;
@@ -388,14 +390,19 @@ background-image: url(images/childcoding.jpg);
     padding-block : 1.3rem
 } */
   /* homepage style */
- 
+ iframe {
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+    border: 0;
+ }
 
   /* services page style */
-   .loopdiv h1#looph1 {
+   .loopdiv h2#looph2 {
      padding: 0;
     margin: 1.5rem 0;
   }
-  .loopdiv h1 > span {
+  .loopdiv h2 > span {
     text-align: left;
     color: var(--clr-green-dark);
     overflow: hidden;
