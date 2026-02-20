@@ -2,40 +2,43 @@
 
 ## PURPOSE OF THE WEBSITE
 
-This Website is my personal brand website, where I'll showcase to visitors the services that I can offer to them. These services are listed below;
+This Website is my personal brand website, where I'll showcase to visitors how i can solve their problems using tech, 
+and also empower them with technical skills.
 
-- It'll show to visitor my services such as, Website-Development, Graphic-designs, General printing services, Logo, banners and brand creation.
-- Document formatting, letter writting, creation of professional CV's, Cover letters and Resumes.
--Additionally, promotion of my Website Development & Basic Computer Training(MS-Office, Typing & Internet) services.
--Attraction & Conversion of visitors using CTA's (e.g Register Now)
-_Build Trust by showcasing testimonials, images & / videos.
+### These services are listed below
 
-### PHASE ONE
+- Website Development
+- Graphic design
+- office tech supports.
+- Additionally, promotion of my Website Development & Basic Computer Training(MS-Office, Typing & Internet) services.
+- Attraction & Conversion of visitors using CTA's (e.g Register Now)
+_ Build Trust by showcasing testimonials, images & / videos.
 
-## PAGE STRUCTURE OUTLINE
+## PHASE ONE
 
-Homepage - Overview of all services, Intro banner & CTA buttons
-About Page- Who I am, my mission and brand story
-Services Page - Detailed breakdown of what MGL Tech Brand offers.
-Training/Courses Page - Web development & Computer lessons, etc
-Contact Page - Form + whatsapp button, barcode & map (optional for now)
-Testimonials/Gallery for social proof
+### PAGE STRUCTURE OUTLINE
 
-## PLANNING CONTENT
+- Homepage - Overview of all services, Intro banner & CTA buttons, brand review (for teust building) and FAQs.
+- About Page- Who I am, my mission, vision and how I work.
+- Services Page - Detailed breakdown of what MarveeyLabs offers.
+- Contact Page - Form + whatsapp button, & map.
+- Testimonials/Gallery for social proof
 
-- I will start by writing short contents for all pages such as paragraphs, headlines and bullet points
-- Preparation of service icons, fonts course photos, and testimonials
--decide on page consistent color, logo and font style which represent my brand
+### PLANNING CONTENT
 
-### PHASE TWO: DEVELOPMENT PROCESS
+- I will start by writing contents for all pages such as paragraphs, headlines, heading, and bullet points
+- Preparation of service icons,social
+icons,  photos, and testimonials
+- decide on page consistent color, logo and font style which represent my brand.
 
-I will write my code from scratch and try to integrate it with modern standard while i'm making future upgrades.
+## PHASE TWO: DEVELOPMENT PROCESS
 
+- I will write my code from scratch and try to integrate it with modern standard while i'm making future upgrades.
 - HTML - For the structure
 - CSS -  for styling(i'll utilize flexbox and grid for layout)
 -Javascript - for interactivity;  I will add a toggle menu for navigation, scroll to top button, form validation & testimonials that scrolls repeatedly etc.
 
-### PHASE 3: FRONT-END DEVELOPMENT
+## PHASE 3: FRONT-END DEVELOPMENT
 
 Build Structure (HTML)
 
@@ -44,7 +47,6 @@ Pages to include:
 - index.html(home)
 - about.html
 - services.html
-- courses.html
 - contact.html
 
 Styles Layout (CSS)
@@ -52,7 +54,7 @@ Styles Layout (CSS)
 I will use:
 
 - Flexbox & Grid for layout
-Custom fonts from Google Fonts
+- Custom fonts from Google Fonts
 - A consistent color palette
 - Animations & transitions for smoother UL
 - media queries for responsiveness
@@ -61,19 +63,20 @@ Custom fonts from Google Fonts
 Javascript Interactivity
 
 - Mobile Navigation toggle
-- Form Validation
+- Form Validation & submission
 - Whatsapp Api chat link/button
-- Scroll to top
+- Scroll to top btn
+- dynamic nav toggle
 
-### PHASE FOUR: DOMAIN & HOSTING
+## PHASE FOUR: DOMAIN & HOSTING
 
 - Buy a domain
 - Get hosting
 - connect domain
 
-### PHASE FIVE: SEO & ANALYTICS
+## PHASE FIVE: SEO & ANALYTICS
 
-#### Basic use of SEO on every page
+####  use rich  SEO on every page
 
 - Usage of proper title tag is paramount
 - Meta description
@@ -85,14 +88,14 @@ Javascript Interactivity
 
 - Add google Analytics tracking code
 
-### PHASE SIX: FREQUENT MAINTENANCE
+## PHASE SIX: FREQUENT MAINTENANCE
 
 - Check the forms monthly
-- Update course offerings and service pricing as soon as I upgrade the courses
-- Frequent backup  & use of version control to save mt files
+- Frequent backup  & use of version control to save my files
 - Always watch the site speed and test it's responsiveness to spot any issues.
 - Monitor the google search console to see any errors or if there's slow traffic to my page.
 
 ## RESULTS
-
+pending....
 ## CONCLUSION
+pending....
