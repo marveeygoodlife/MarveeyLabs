@@ -353,22 +353,22 @@ background-image: url(images/childcoding.jpg);
 margin-bottom: 1.3rem;
 }
 
-article#serviceCardContainer {
+article#serviceCardContainer, #mission-section {
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1rem;
     width: 100%;    
     padding: 18px;
     text-align: center;
  }
- article#serviceCardContainer div.serviceCard {
+ article#serviceCardContainer div.serviceCard, div.mission {
         background: var(--clr-grey-9);
         padding: 10px 12px;
         border-radius: 10px;
         transition: transform .3s ease-in-out;
     }
-    div.serviceCard:hover {
+    div.serviceCard:hover,div.mission:hover {
         transform: translateX(4px) scale(1.01)  ;
     }
     a.secondaryBtn {
@@ -389,14 +389,55 @@ article#serviceCardContainer {
 #aboutHero .container {
     margin-bottom: 1rem;
 }
-/* about page */
-  /* contact style */
- iframe {
-    max-width: 100%;
-    height: auto;
-    margin: 1.5rem auto;
-    border: 0;
+#mission-section div.whoiam {
+    border-radius:  100px  0 70px 0 ;
+}
+#mission-section div.mymission {
+     border-radius:  0 100px 0 70px;
+
+}
+#mission-section div.myvision {
+    border-radius:   0 70px 0 0;
  }
+#mission-section div.myvision2 {
+    border-radius: 70px 0 0;
+ }
+/* about page */
+/* services page */
+#serviceshero, #contactSection {
+    margin-top: 3rem;
+}
+div.service {
+    background: var(--clr-grey-8);
+    padding: 12px;
+    margin: 2rem 0;
+    border: 1px solid var(--clr-grey-2);
+}
+
+div.service ul {
+     background: var(--clr-grey-8);
+    padding-left: 12px;
+     margin: 1px ;
+  }
+div.service ul li {
+     margin-left: 15px;
+ }
+#servicesSection div.service   a.servicelink {
+    color: var(--accent-color);
+    text-transform: capitalize;
+    margin: 3rem 0;
+ }
+#servicesSection div.service   a.servicelink:visited {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+#servicesSection div.service   a:link:hover {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+.service h2 {
+    margin-block: 1.2rem;
+}
 
   /* services page style */
    .loopdiv h2#looph2 {
@@ -405,7 +446,7 @@ article#serviceCardContainer {
   }
   .loopdiv h2 > span {
     text-align: left;
-    color: var(--clr-green-dark);
+    color: var(--accent-color);
     overflow: hidden;
     height: 1.25em;
     position: relative;
@@ -439,6 +480,46 @@ article#serviceCardContainer {
     }
   }
   /* services page style */
+
+  /* contact style */
+ iframe {
+    max-width: 100%;
+    height: auto;
+    margin: 2rem auto;
+    border: 0;
+ }
+#contactSection {
+    margin-top: 1rem;
+padding: 12px;
+}
+#contactSection ul {
+text-align: left;
+padding: 20px;
+}
+
+#twoColumn {
+    width: 100%;
+    display: grid;
+   gap: 1rem;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+#leavemessage {
+    width: 100%;
+}
+#leavemessage, #contactsection {
+    padding: 12px;
+    margin-bottom: 1rem; 
+}
+.alternateContact {
+    margin: 2rem 0;
+}
+.alternateContact .rightalign {
+    text-align:  right;
+    padding-block: 6px;
+}
+#contactcta {
+    margin-block: 30px 0;
+}
 /* media queries */
 
 
@@ -517,7 +598,8 @@ footer p a:hover {
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 801px) {
+
     h1 {
         font-size: 2.3rem;
       }
@@ -588,6 +670,31 @@ footer p a:hover {
     .social-icons a:hover {
         color: var(--clr-primary-7);
     }
+    .hero {
+        text-align: center;
+    }
+    .service {
+        text-align: center;
+    }
+    .alternateContact .rightalign {
+    text-align:  center;
+    padding-block: 6px;
+}
+p.centeralign, h2.centeralign {
+    text-align: center;
+}
+ 
+    /* about style */
+       article#serviceCardContainer, #mission-section {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ }
+ #locationsection {
+    width: 1000px;
+ }
+ iframe {
+    width: 1000px;
+    height: 400px;
+ }
 }
 @media screen and (min-width: 992px) {
     .hero {
