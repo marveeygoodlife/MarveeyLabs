@@ -86,7 +86,7 @@ html {
 body {
     color: var(--clr-grey-1);
     background-color: var(--clr-grey-10);
-    font: normal 300 .975rem / 1.5 'Lato', sans-serif;
+    font: normal 400 .995rem / 1.5 'Lato', sans-serif;
 }
 /* heading style */
 h1, h2, h3 {
@@ -106,14 +106,16 @@ h1 {font-size: 1.5rem;}
  
 /* heading style end */
 header {
-    position: fixed;
     z-index: 100;
+    transition: position .5s ease;
     height: auto;
     width: 100%;
     top: 0;
     left: 0;
 }
- 
+ .stickyHeader {
+     position: sticky;
+ }
 /* navigation style */
  nav, footer {
     background-color: var(--clr-white);
@@ -154,7 +156,7 @@ header {
 text-decoration: none;
 color: var(--clr-grey-4);
  }
- .links a:hover {
+ .links a:hover  {
 text-decoration: none;
 color: var(--clr-primary-5);
 background-color: var(--clr-primary-8);
@@ -167,7 +169,7 @@ text-decoration: underline;
  .links {
     height:0;
     overflow: hidden;
-    transition: var(--transition);
+    transition: height .3s ease-in-out;
  }
  .show-links {
     height: auto;
@@ -320,29 +322,6 @@ section.section-container {
   }
  /* SECTION REVIEWS STYLES */
 
- /* footer */
-footer {
-    position: static;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    padding:2rem;
-}
-.footer-social-icons {
-    font-size: 1.5rem;
-    display: flex;
-}
-.footer-social-icons li {
-    list-style-type: none;
-}
-.footer-social-icons a {
-    margin: 0 0.5rem;
-    color: var(--clr-primary-5);
-    transition: var(--transition);
-}
-.footer-social-icons a:hover {
-    color: var(--clr-primary-7);
-}
 /* PAGE SPECIFIC STYLE START */
   /* homepage style */
 
@@ -375,13 +354,30 @@ background-image: url(images/childcoding.jpg);
 margin-bottom: 1.3rem;
 }
 
-div.serviceCard {
+article#serviceCardContainer {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-     gap: 1rem;
-    padding: 8px;
-}
+    gap: 1rem;
+    width: 100%;    
+    padding: 18px;
+    text-align: center;
+ }
+ article#serviceCardContainer div.serviceCard {
+        background: var(--clr-grey-9);
+        padding: 10px 12px;
+        border-radius: 10px;
+        transition: transform .3s ease-in-out;
+    }
+    div.serviceCard:hover {
+        transform: translateX(4px) scale(1.01)  ;
+    }
+    a.secondaryBtn {
+        background-color: var(--clr-primary-4);
+    }
+    a.secondaryBtn:hover {
+        background-color: var(--clr-primary-3);
+    }
   /* homepage style end */
   
 /* about page */
@@ -446,6 +442,76 @@ div.serviceCard {
   /* services page style */
 /* media queries */
 
+
+
+/* footer style */
+
+footer {
+    position: static;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    padding:2rem;
+}
+footer li {
+    list-style-type: none;
+    margin: .55rem 0;
+}
+footer .footer-links li {
+    list-style-type: none;
+    margin-bottom: .55rem;
+}
+footer .footer-links li a:link {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: var(--background-color);
+ }
+footer .footer-links li a:visited {
+     color: inherit;
+ }
+footer .footer-links li a:hover {
+     color: var(--clr-primary-5);
+     text-decoration: underline;
+ }
+footer div.linksContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: auto;
+    gap:  1rem;
+}
+footer .footer-social-icons {
+    font-size: 1.5rem;
+    display: flex;
+     align-items: center;
+    justify-content: center;
+    margin:.22rem auto;
+}
+.footer-social-icons li {
+    list-style-type: none;
+}
+.footer-social-icons a {
+    margin: 0 0.5rem;
+    color: var(--clr-primary-5);
+    transition: var(--transition);
+}
+.footer-social-icons a:hover {
+    color: var(--clr-primary-7);
+}
+footer p {
+    text-align: center;
+    margin-top:  1.5rem;
+}
+footer p a {
+    color: var(--clr-green-dark);
+    text-decoration: none;
+}
+footer p a:visited {
+    color: inherit;
+}
+footer p a:hover {
+    text-decoration: underline;
+}
+/* media queries */
 @media  screen and (max-width: 800px) {
     .social-icons {
          display: none;
@@ -531,16 +597,105 @@ div.serviceCard {
     
   }
   .topScrollBtn {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     color: white;
-    background:hsl(205, 77%, 27%);
+    background:var(--clr-primary-5);
     position: fixed;
     z-index: 50;
     bottom: 5rem;
     text-align: center;
     text-decoration: none;
     right: 3rem;
-    padding: 15px;
+    padding: 10px;
+    visibility: hidden;
   }
+  a.topScrollBtn.showScrollBtn {
+visibility: visible;
+  }
+
+  /* overlay */
+
+  #overlay {
+     inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     z-index: 9999;
+     opacity: 1;
+     transition: opacity 0.3s ease, visibility .3s ease;
+     visibility: visible;
+   }
+  #overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  #modalBox {
+    z-index: 50;
+    background-color: var(--clr-primary-9);
+    color: var(--clr-grey-1);
+    padding: 2rem;
+    max-width: 400px;
+    width: 90%;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+   }
+   .closeModal {
+    position: absolute;
+    top: 10px;
+    font-size: 2rem;
+    right: 15px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--background-color);
+   }
+   /* modal form */
+   #modalForm {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+   }
+   #modalForm input {
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid var(--clr-grey-1);
+    border-radius: 5px;
+    outline: none;
+   }
+
+   #modalForm input:focus {
+    border-color: var(--accent-color);
+   }
+   #modalForm button {
+    cursor: pointer;
+    padding: 0.6rem 0;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: var(--clr-grey-2);
+    border: none;
+    border-radius: 5px;
+   }
+   #modalForm button:hover {
+    background-color: var(--clr-grey-3);
+   }
+   .modalError {
+    color: var(--accent-color);
+    font-size: 0.985rem;
+    padding: 0;
+    margin: 0;
+   }
+   @media  screen and (max-width: 480px) {
+    #modalBox {
+        padding: 1.5rem;
+        width: 95%;
+    }
+   }
