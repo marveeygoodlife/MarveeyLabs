@@ -107,13 +107,12 @@ h1 {font-size: 1.5rem;}
 /* heading style end */
 header {
     z-index: 100;
-    transition: position .5s ease;
-    height: auto;
+     height: auto;
     width: 100%;
     top: 0;
     left: 0;
 }
- .stickyHeader {
+ header.stickyHeader {
      position: sticky;
  }
 /* navigation style */
@@ -156,7 +155,7 @@ header {
 text-decoration: none;
 color: var(--clr-grey-4);
  }
- .links a:hover  {
+ .links a:hover {
 text-decoration: none;
 color: var(--clr-primary-5);
 background-color: var(--clr-primary-8);
@@ -526,7 +525,7 @@ footer p a:hover {
         font-size: 2rem;
       }
       h3 {
-        font-size: 1.05rem;
+        font-size: 1.5rem;
       }
       h4 {
         font-size: 1rem;
@@ -542,7 +541,7 @@ footer p a:hover {
       }
        
     p {
-        font-size: 1.05rem;
+        font-size: 1.15rem;
     }
     
     div.nav-center {
@@ -565,7 +564,7 @@ footer p a:hover {
         display: flex;
     }
     .links a {
-        font-size: 1.05rem;
+        font-size: 1rem;
     padding: 0;
     margin: 0 0.5rem;
     }
@@ -687,7 +686,7 @@ visibility: visible;
    #modalForm button:hover {
     background-color: var(--clr-grey-3);
    }
-   .modalError {
+   #modalForm .modalError {
     color: var(--accent-color);
     font-size: 0.985rem;
     padding: 0;

@@ -36,12 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // show modal on page load with a little delay
     //GET SAVED DATE
-    const savedDate = localStorage.getItem(modalKey)
+    const savedDate = localStorage.getItem(modalKey);
      //GET TODAY DATE
     const today = new Date().toISOString().split("T")[0];
-    // CHECK IF SAVED DATE IS NOT THE SAME AS TODAY DATE
-    if (savedDate !== today) {
-     setTimeout(showModalBox, 2000)
+    // CHECK IF SAVED DATE IS NOT THE SAME AS TODAY DATE & ONLY ON INDEX PAGE
+    if ( indexpage && savedDate !== today) {
+        setTimeout(showModalBox, 2000);
  }
      
 
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (indexpage) {
             
             // close modal when user  click on overlay && NOT modalbox
-            if (!modalBox.contains(e.target) && !modalOverlay.classList.contains("hidden")) {
+            if (!modalBox.contains(e.target) && !modalOverlay.classList.contains("hidden") && e.target === modalOverlay) {
                 closeModalBox();
             }
         };
@@ -79,36 +79,45 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             const formData = new FormData(modalForm);
             const user = Object.fromEntries(formData);
+            const emailValue = (user.newsletter || "").trim().toLowerCase();
+            console.log(emailValue)
+console.log("emailValue:", emailValue, "valid?", isValidEmail(emailValue));
 
-            const { newsletter } = user;
-
-            const cleanedData = {
-                email: cleanData(newsletter).toLowerCase()
+            if (!isValidEmail(emailValue)) {
+                modalError.textContent = "Please enter a valid email address";
+                console.log("Invalid email, stopping submit")
+                return;
             };
-            
-            if (!cleanedData.email) {
-                modalError.textContent = "Email is required";
-            } else {
-                closeModalBox()
+            modalError.textContent = "";
+            const cleanedData = { email: emailValue };
+
+            closeModalBox();
+        // TODO: Implement backend call to actually subscribe this email.
+        // Currently this only logs the email to the console and does not send it anywhere.
                 console.log(cleanedData.email)
-            }
-        })
-    }
+            
+        });
+    };
  
 
 
-    // clean date
-    function cleanData(value) {
-        return value.trim();
-    };
+    // clean data
+   function isValidEmail(email) {
+  const value = email.trim();
 
+  // Strict regex
+  const strictRegex = /^(?!.*\.\.)[A-Za-z0-9]+([._%+-]?[A-Za-z0-9]+)*@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+  return strictRegex.test(value);
+}
+    
     window.addEventListener("scroll", () => {
         //add sticky header
-        if (window.scrollY > 1500) header.classList.add("stickyHeader");
+        if (window.scrollY > 400) header.classList.add("stickyHeader");
         else header.classList.remove("stickyHeader");
 
         //show scroll to top button
-        if (window.scrollY > 2000) scrollBtn.classList.add("showScrollBtn");
+        if (window.scrollY > 900) scrollBtn.classList.add("showScrollBtn");
         else scrollBtn.classList.remove("showScrollBtn");
     });
 });
