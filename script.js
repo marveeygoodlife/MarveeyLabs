@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalForm = document.getElementById("modalForm");
     const modalError = document.getElementById("modalError");
     const indexpage = document.getElementById("indexpage");
-    const modalKey = "ModalDate";
+    const modalKey = "lastSeen";
  
     // save the current date the modal was interacted with.
     // SAVE MODAL DATE
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if ( indexpage && savedDate !== today) {
         setTimeout(showModalBox, 2000);
  }
-     
+     sessionStorage.setItem("help", "good")
 
     //open or close ul links
     navtoggle.addEventListener("click", () => {
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (indexpage) {
             
-            // close modal when user  click on overlay && NOT modalbox
+// close modal when user  click on overlay && NOT modalbox
             if (!modalBox.contains(e.target) && !modalOverlay.classList.contains("hidden") && e.target === modalOverlay) {
                 closeModalBox();
             }
@@ -74,6 +74,8 @@ document.addEventListener("DOMContentLoaded", () => {
         closeModal.addEventListener("click", () => {
             closeModalBox()
         });
+
+
         //handle modal form submit
         modalForm.addEventListener("submit", (e) => {
             e.preventDefault();
@@ -121,3 +123,32 @@ console.log("emailValue:", emailValue, "valid?", isValidEmail(emailValue));
         else scrollBtn.classList.remove("showScrollBtn");
     });
 });
+
+//accordion style
+/* create function
+loop round button
+set isActive, remove active class from btns, add active class to clicked button  */
+function initializeAccordion() {
+    const accordions = document.querySelectorAll(".accordion");
+    accordions.forEach((accord) => {
+        accord.onclick = function () {
+            const isActive = this.classList.contains("active");
+
+            //remove active class from buttons
+            document.querySelectorAll(".accordion").forEach((btn) => {
+                btn.classList.remove("active");
+                btn.querySelector(".icon").textContent = "+";
+                const panel = btn.nextElementSibling;
+                panel.style.maxHeight = null;
+            });
+            // show accordion
+            if (!isActive) {
+                this.classList.add("active");
+                this.querySelector(".icon").textContent = "-";
+                const panel = this.nextElementSibling;
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        }
+    })
+}
+initializeAccordion()
